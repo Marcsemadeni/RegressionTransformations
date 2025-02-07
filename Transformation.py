@@ -1,5 +1,5 @@
 """
-Group:       Mark Semadeni and Sarah Martin
+Group:       Marc Semadeni and Sarah Martin
 Assignment:  Regression Transformations
 Date:        February 7, 2025
 """
