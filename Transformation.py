@@ -1,3 +1,9 @@
+"""
+Group:       Mark Semadeni and Sarah Martin
+Assignment:  Regression Transformations
+Date:        February 7, 2025
+"""
+
 import math
 import pandas as pd
 import matplotlib
