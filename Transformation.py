@@ -26,19 +26,19 @@ y = data.salary
 # model = sm.OLS(y, x).fit()
 # print(model.summary())
 
-# log_x=np.log(X)
-# plt.scatter(log_x,y)
-# plt.xlabel("Comp Time")
-# plt.ylabel("Salary")
-# plt.title("Scatter plot of Comp Time and Salary")
-# sns.regplot(x=log_x,y=y, line_kws={"color":"red"})
-# plt.show()
+log_x=np.log1p(X)
+plt.scatter(log_x,y)
+plt.xlabel("Comp Time")
+plt.ylabel("Salary")
+plt.title("Scatter plot of Comp Time and Salary")
+sns.regplot(x=log_x,y=y, line_kws={"color":"red"})
+plt.show()
 
-# #Adjusted r-squared: DOESNT WORK
+#Adjusted r-squared: .199
 
-# log_x = sm.add_constant(log_x)
-# model = sm.OLS(y, log_x).fit()
-# print(model.summary())
+log_x = sm.add_constant(log_x)
+model = sm.OLS(y, log_x).fit()
+print(model.summary())
 
 
 # x_squared=X**2
@@ -56,16 +56,16 @@ y = data.salary
 # print(model.summary())
 
 
-power_of_x=1.05**X
-plt.scatter(power_of_x,y)
-plt.xlabel("Comp Time")
-plt.ylabel("Salary")
-plt.title("Scatter plot of Comp Time and Salary")
-sns.regplot(x=power_of_x,y=y, line_kws={"color":"red"})
-plt.show()
+# power_of_x=1.05**X
+# plt.scatter(power_of_x,y)
+# plt.xlabel("Comp Time")
+# plt.ylabel("Salary")
+# plt.title("Scatter plot of Comp Time and Salary")
+# sns.regplot(x=power_of_x,y=y, line_kws={"color":"red"})
+# plt.show()
 
-#Adjusted r-squared: 0.669
+# #Adjusted r-squared: 0.669
 
-power_of_x = sm.add_constant(power_of_x)
-model = sm.OLS(y, power_of_x).fit()
-print(model.summary())
+# power_of_x = sm.add_constant(power_of_x)
+# model = sm.OLS(y, power_of_x).fit()
+# print(model.summary())
