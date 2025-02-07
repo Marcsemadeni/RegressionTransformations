@@ -12,9 +12,13 @@ import seaborn as sns
 import statsmodels.api as sm
 import numpy as np
 
+# --------------------------------
+# Step 1: Least Squares Regression
+# --------------------------------
+
+# Import data; replace nulls
 data = pd.read_csv('Mewing data set.csv')
 data.fillna(0, inplace=True)
-# print(data.head())
 
 X = data['Comp Time']
 y = data.salary
