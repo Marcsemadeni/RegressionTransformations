@@ -17,13 +17,11 @@ plt.scatter(x,y)
 plt.xlabel("Comp Time")
 plt.ylabel("Salary")
 plt.title("Scatter plot of Comp Time and Salary")
-m, b = np.polyfit(x, y, 1)
-plt.plot(x, m*x + b, color="red")
+sns.regplot(x=x,y=y, line_kws={"color":"red"})
 plt.show()
 
 #Adjusted r-squared .489
 
-# x = sm.add_constant(x)
-# model = sm.OLS(y, x).fit()
-
-# print(model.summary())
+x = sm.add_constant(x)
+model = sm.OLS(y, x).fit()
+print(model.summary())
